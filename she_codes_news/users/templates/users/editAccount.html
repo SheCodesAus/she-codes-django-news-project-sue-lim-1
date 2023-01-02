@@ -1,19 +1,19 @@
-{% extends "base.html" %}
-{% comment %} CREATE A NEW STORY {% endcomment %}
-{% comment %} CREATE A NEW STORY {% endcomment %}
-{%load static%}
+{% extends 'base.html' %}
+{% load static %}
+
 {% block stylesheets %}
+
 <link rel="stylesheet" type="text/css" href="{% static '.\static\news\news.css' %}">
 {% endblock %}
-
 {% block content %}
 
+{% comment %} <br></br> {% endcomment %}
 <div class="form_row">
     <div id="form_3_columns">
     </div>
 
     <div id="form_3_columns_middle">
-        <h2>Create an Story</h2>
+        <h2>Edit your account</h2>
         <table>
             <form method="post">
             {% csrf_token %}
@@ -21,6 +21,7 @@
         </table>
         <br></br>
         <input class="button1" type="submit" value="submit">
+        </div>
     </div>
 
     <div id="form_3_columns">
@@ -28,8 +29,4 @@
 </div>
 
 {% endblock %}
-
-
-
-
 

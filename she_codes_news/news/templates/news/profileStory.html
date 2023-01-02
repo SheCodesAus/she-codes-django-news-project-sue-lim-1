@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% comment %} VIEW BY STORY BY AUTHOR {% endcomment %}
+{% comment %} VIEW BY STORY BY AUTHOR {% endcomment %}
+
+{% load static %}
+
+{% block stylesheets %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'news/news.css' %}">
+{% endblock %}
+{% block content %}
+<h2>View Story by profile...</h2>
+post author: {{ story.author.username }}
+
+
+<div id="author_stories">
+    <h2>You are viewing all stories by ...{{ story.author }}...</h2>
+    {% if newsstory_list %}
+        {% for story in newsstory_list %}
+            {% include "news/storyCard.html" with story=story %}
+
+            {% comment %} <p>{{ story.title }}</p> {% endcomment %}
+        {% endfor %}
+    {% else %}
+        <p>No stories are available.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

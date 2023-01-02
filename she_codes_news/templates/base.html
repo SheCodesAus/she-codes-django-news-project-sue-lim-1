@@ -1,25 +1,35 @@
-<!doctype html>
+{% load static %}
+{% comment %} this is the top banner template of each page {% endcomment %}
 
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>She Codes News</title>
+        <title>She Codes Foodies</title>
         <meta name="description" content="">
-        <meta name="author" content="Hayley van Waas">
+        <meta name="author" content="Sue Lim">
         <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+ 
+            {% block stylesheets %}{% endblock %}
     </head>
 
     <body>
         <header>
-            <div id="header-text">
+            {% comment %} <div id="header-text"> {% endcomment %}
+            <div id="header-text", class="nav-column-1">
                 <a id="header-link" href="{% url 'news:index' %}">
-                    <h1>She {Codes} News</h1>
+                    <h1 class="">She {Codes} Foods</h1>
                 </a>
             </div>
-            <!-- include nav here -->
+            {% include './nav.html' %}
         </header>
 
-        <!-- content blocks here -->
+        {% block content %}
+        {% endblock %}
+
+        <br></br>
+        <footer><h4>This is the footer</h4></footer>   
     </body>
+    
 </html>
+
