@@ -1,3 +1,3 @@
-# Plus Resources: Django Project Starter
+# SheCodes Django News Project
 
-Starter code for the Plus Django project.
+Django news project 
